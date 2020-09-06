@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home | Ren Komatsu</title>
+    <title>
+      Tailwind Starter Template - Landing Page Template: Tailwind Toolbox
+    </title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
@@ -12,7 +14,11 @@
     <!-- Font Awesome if you need it
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   -->
-    <link rel="stylesheet" href="/build/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"
+    />
+    <!--Replace with your tailwind.css once created-->
 
     <link
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
@@ -22,7 +28,7 @@
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
       .gradient {
-        background: linear-gradient(90deg, #8546fa 0%, #17d851 100%);
+        background: linear-gradient(90deg, #8546fa 0%, #69ff96 100%);
       }
     </style>
   </head>
@@ -60,16 +66,16 @@
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
               <a
-                class="inline-block font-bold text-black no-underline hover:text-indigo-800 py-2 px-4"
+                class="inline-block text-black no-underline hover:text-indigo-800 py-2 px-4"
                 href="#"
-                >Home</a
+                >link</a
               >
             </li>
             <li class="mr-3">
               <a
                 class="inline-block text-black no-underline hover:text-indigo-800 py-2 px-4"
-                href="/publications.html"
-                >Publications</a
+                href="#"
+                >link</a
               >
             </li>
           </ul>
@@ -79,65 +85,32 @@
     </nav>
 
     <!--Hero-->
-    <div class="pt-16">
+    <div class="pt-24">
       <div
         class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center"
       >
         <!--Left Col-->
-        <div class="w-full md:w-2/5 py-6 px-2 text-center">
-          <img
-            class="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full"
-            src="img/profile.jpg"
-          />
-          <p class="leading-normal text-2xl my-2">Ren Komatsu</p>
-          <img
-            class="w-56 md:w-64 mx-auto"
-            src="img/contact.png"
-            alt="contact"
-          />
-          <a
-            href="https://github.com/matsuren"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline"
-            ><p>GitHub</p></a
-          >
-          <a
-            href=" https://scholar.google.com/citations?user=xlY6tG8AAAAJ"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline"
-            ><p>Google Scholar</p></a
-          >
+        <div class="w-full md:w-3/5 py-6 text-center">
+          <img class="w-full md:w-4/5 z-50" src="hero.png" />
         </div>
         <!--Right Col-->
         <div
-          class="flex flex-col w-full md:w-3/5 px-2 justify-center items-start text-center md:text-left"
+          class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
         >
-          <h1 class="my-4 text-2xl md:text-3xl font-bold leading-tight">
-            About me
+          <p class="uppercase tracking-loose w-full">What business are you?</p>
+          <h1 class="my-4 text-5xl font-bold leading-tight">
+            Main Hero Message to sell yourself!
           </h1>
-          <p class="leading-normal text-1xl md:text-2xl mb-8">
-            I am a Project Assistant Professor at the Department of Precision
-            Engineering, the University of Tokyo. I received my Ph.D. degree in
-            June 2020 from the University of Tokyo, where I was advised by
-            <a
-              href="http://www.robot.t.u-tokyo.ac.jp/~yamashita/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="underline"
-              >Atsushi Yamashita</a
-            >
-            and
-            <a
-              href="http://www.robot.t.u-tokyo.ac.jp/asamalab/Asama_page/top_a.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="underline"
-              >Hajime Asama</a
-            >. My research interests include computer vision, deep learning, and
-            robot teleoperation.
+          <p class="leading-normal text-2xl mb-8">
+            Sub-hero message, not too long and not too short. Make it just
+            right!
           </p>
+
+          <button
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
+          >
+            Subscribe
+          </button>
         </div>
       </div>
     </div>
@@ -182,25 +155,6 @@
       </svg>
     </div>
 
-    <!-- Education -->
-    <section class="bg-white border-b py-8">
-      <div class="container max-w-5xl mx-auto m-8">
-        <h1
-          class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
-        >
-          Education
-        </h1>
-        <div class="w-full mb-4">
-          <div
-            class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"
-          ></div>
-        </div>
-
-        <div class="text-black text-4xl">Underconstruction</div>
-      </div>
-    </section>
-
-    <!-- Other -->
     <section class="bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
         <h1
@@ -362,6 +316,22 @@
       </g>
     </svg>
 
+    <section class="container mx-auto text-center py-6 mb-12">
+      <h1
+        class="w-full my-2 text-5xl font-bold leading-tight text-center text-white"
+      >
+        Call to Action
+      </h1>
+      <div class="w-full mb-4">
+        <div
+          class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"
+        ></div>
+      </div>
+      <h3 class="my-4 text-3xl leading-tight">
+        Main Hero Message to sell yourself!
+      </h3>
+    </section>
+
     <!--Footer-->
     <footer class="bg-white">
       <div class="container mx-auto text-gray-800">
@@ -377,6 +347,7 @@
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
       var navcontent = document.getElementById("nav-content");
+      var brandname = document.getElementById("brandname");
       var toToggle = document.querySelectorAll(".toggleColour");
 
       document.addEventListener("scroll", function () {
