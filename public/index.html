@@ -50,7 +50,7 @@
     <!--Nav-->
     <nav id="header" class="fixed w-full z-30 top-0 text-white">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-        <div class="pl-4 flex items-center text-black toggleColour text-lg">RK</div>
+        <div class="pl-4 flex items-center text-white toggleColor text-lg">RK</div>
 
         <div class="block lg:hidden pr-4">
           <button id="nav-toggle" class="flex items-center p-1 text-orange-800 hover:text-gray-900">
@@ -71,7 +71,7 @@
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
               <a
-                class="inline-block font-bold text-black no-underline hover:text-indigo-800 py-2 px-4 toggleColour"
+                class="inline-block font-bold text-white no-underline hover:text-indigo-800 py-2 px-4 toggleColor"
                 href="#"
                 >Home</a
               >
@@ -470,7 +470,7 @@
       </div>
     </section>
 
-    <!-- Change the colour #f8fafc to match the previous section colour -->
+    <!-- Change the Color #f8fafc to match the previous section Color -->
     <svg
       class="wave-top"
       viewBox="0 0 1439 147"
@@ -522,7 +522,7 @@
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
       var navcontent = document.getElementById("nav-content");
-      var toToggle = document.querySelectorAll(".toggleColour");
+      var toToggle = document.querySelectorAll(".toggleColor");
 
       document.addEventListener("scroll", function () {
         /*Apply classes for slide in bar*/
@@ -530,7 +530,7 @@
 
         if (scrollpos > 20) {
           header.classList.add("bg-white");
-          //Use to switch toggleColour colours
+          //Use to switch toggleColor Colors
           for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.add("text-black");
             toToggle[i].classList.remove("text-white");
@@ -540,7 +540,7 @@
           navcontent.classList.add("bg-white");
         } else {
           header.classList.remove("bg-white");
-          //Use to switch toggleColour colours
+          //Use to switch toggleColor Colors
           for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.add("text-white");
             toToggle[i].classList.remove("text-black");
