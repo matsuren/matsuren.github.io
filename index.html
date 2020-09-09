@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177517745-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-177517745-1");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home | Ren Komatsu</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta
+      name="description"
+      content="Ren Komatsu is a Project Assistant Professor at the Department of Precision Engineering, the University of Tokyo. His research interests include computer vision, deep learning, robot teleoperation, and disaster response. Feel free to connect!"
+    />
+    <meta name="keywords" content="research, computer vision, deep learning" />
+    <meta name="author" content="Ren Komatsu" />
 
     <!-- Font Awesome if you need it
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
@@ -35,7 +50,7 @@
     <!--Nav-->
     <nav id="header" class="fixed w-full z-30 top-0 text-white">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-        <div class="pl-4 flex items-center">RK</div>
+        <div class="pl-4 flex items-center text-black toggleColour text-lg">RK</div>
 
         <div class="block lg:hidden pr-4">
           <button id="nav-toggle" class="flex items-center p-1 text-orange-800 hover:text-gray-900">
@@ -56,7 +71,7 @@
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
               <a
-                class="inline-block font-bold text-black no-underline hover:text-indigo-800 py-2 px-4"
+                class="inline-block font-bold text-black no-underline hover:text-indigo-800 py-2 px-4 toggleColour"
                 href="#"
                 >Home</a
               >
@@ -80,7 +95,7 @@
         <!--Left Col-->
         <div class="w-full md:w-2/5 py-4 px-2 text-center">
           <img class="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full" src="img/profile.jpg" />
-          <p class="leading-normal text-2xl my-1">Ren Komatsu</p>
+          <h2 class="leading-normal text-2xl my-1">Ren Komatsu</h2>
           <!-- <p class="my-2">
             <a
               href="https://github.com/matsuren"
@@ -109,10 +124,10 @@
         <!--Right Col-->
         <div class="flex flex-col w-full md:w-3/5 px-2 justify-center items-start text-left">
           <h1 class="my-4 text-2xl md:text-3xl font-bold leading-tight">About me</h1>
-          <p class="leading-normal text-lg md:text-xl mb-8">
+          <h2 class="leading-normal text-lg md:text-xl mb-2">
             I am a Project Assistant Professor at the Department of Precision Engineering, the
-            University of Tokyo. I received my Ph.D. degree in June 2020 from the University of
-            Tokyo, where I was advised by
+            University of Tokyo. I finished my Ph.D. degree last June 2020 at the same university,
+            where I was advised by
             <a
               href="http://www.robot.t.u-tokyo.ac.jp/~yamashita/"
               target="_blank"
@@ -127,9 +142,12 @@
               rel="noopener noreferrer"
               class="underline"
               >Hajime Asama</a
-            >. My research interests include computer vision, deep learning, robot teleoperation,
-            and disaster response.
-          </p>
+            >.
+          </h2>
+          <h2 class="leading-normal text-lg md:text-xl mb-8">
+            My research interests include computer vision, deep learning, robot teleoperation, and
+            disaster response. Feel free to connect!
+          </h2>
         </div>
       </div>
     </div>
@@ -514,7 +532,7 @@
           header.classList.add("bg-white");
           //Use to switch toggleColour colours
           for (var i = 0; i < toToggle.length; i++) {
-            toToggle[i].classList.add("text-gray-800");
+            toToggle[i].classList.add("text-black");
             toToggle[i].classList.remove("text-white");
           }
           header.classList.add("shadow");
@@ -525,7 +543,7 @@
           //Use to switch toggleColour colours
           for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.add("text-white");
-            toToggle[i].classList.remove("text-gray-800");
+            toToggle[i].classList.remove("text-black");
           }
 
           header.classList.remove("shadow");
