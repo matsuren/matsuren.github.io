@@ -3,8 +3,6 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 
 import styles from './index.css?inline';
 
-import Title from "./title"
-
 import ImgFvp from '~/assets/images/research_fvp.jpeg?jsx';
 import ImgFvpSuga from '~/assets/images/research_fvp_suga.jpeg?jsx';
 import ImgDepth from '~/assets/images/research_360_depth.jpeg?jsx';
