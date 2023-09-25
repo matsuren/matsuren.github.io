@@ -1,0 +1,1 @@
+import{H as e,m as t,_ as a}from"./q-619d806c.js";const s=e(t(()=>a(()=>import("./q-3f9d865b.js"),["build/q-3f9d865b.js","build/q-619d806c.js"]),"s_eOToW1z3wdM")),i={title:"Research",meta:[{name:"description",content:"Research"}]};export{s as default,i as head};
