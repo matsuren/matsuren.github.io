@@ -12,6 +12,12 @@ export default component$(() => {
           </div>
           <table class="table-auto my-2">
             <tbody>
+              <tr class="bg-gray-100">
+                <td class="border px-4 py-2">Mar. 2024 - present</td>
+                <td class="border px-4 py-2">
+                  Computer Vision Engineer, Mujin.
+                </td>
+              </tr>
               <tr>
                 <td class="border px-4 py-2">Nov. 2022 - Feb. 2023</td>
                 <td class="border px-4 py-2">
@@ -19,7 +25,7 @@ export default component$(() => {
                 </td>
               </tr>
               <tr class="bg-gray-100">
-                <td class="border px-4 py-2">Apr. 2022 - present</td>
+                <td class="border px-4 py-2">Apr. 2022 - Feb. 2024</td>
                 <td class="border px-4 py-2">
                   Assistant Professor, the Department of Precision Engineering, the University of
                   Tokyo.

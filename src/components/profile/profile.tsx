@@ -18,7 +18,8 @@ export default component$(() => {
           <div class="flex flex-col w-full md:w-3/5 px-2 justify-center items-start text-left">
             <h1 class="my-4 text-2xl md:text-3xl font-bold leading-tight">About me</h1>
             <h2 class="leading-normal text-lg md:text-xl mb-2">
-              I am a Assistant Professor at the Department of Precision Engineering, the University of
+              I am a Computer Vision Engineer in Mujin.
+              Before that, I was a Assistant Professor at the Department of Precision Engineering, the University of
               Tokyo. I finished my Ph.D. degree June 2020 at the same university, where I was advised
               by&nbsp;
               <a
@@ -41,7 +42,7 @@ export default component$(() => {
               .
             </h2>
             <h2 class="leading-normal text-lg md:text-xl mb-8">
-              My research interests include computer vision, deep learning, robot teleoperation, and
+              My interests include computer vision, deep learning, robot teleoperation, and
               disaster response. Feel free to contact me!
             </h2>
           </div>
