@@ -1,7 +1,6 @@
 
 import { component$ } from '@builder.io/qwik';
 import ImgProfile from "~/assets/images/profile.jpg?jsx";
-import ImgContact from '~/assets/images/contact.png?jsx';
 
 export default component$(() => {
   return (
@@ -12,7 +11,6 @@ export default component$(() => {
           <div class="w-full md:w-2/5 py-4 px-2 text-center">
             <ImgProfile class="w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full" alt="profile"/>
             <h2 class="leading-normal text-2xl my-1">Ren Komatsu</h2>
-            <ImgContact class="w-56 md:w-64 mx-auto my-1" alt="contact" />
           </div>
           {/* Right Col */}
           <div class="flex flex-col w-full md:w-3/5 px-2 justify-center items-start text-left">
