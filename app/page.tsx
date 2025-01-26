@@ -4,7 +4,7 @@ export default function Home() {
     <div>
       <main>
         {allResearchCategories.map((category) => (
-          <h1 className="text-lg p-4" id={category.slug} key={category.slug}>
+          <h1 className="text-lg p-4" id={category.slug}>
             {category.title}
           </h1>
         ))}

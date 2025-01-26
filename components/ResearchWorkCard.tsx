@@ -1,10 +1,24 @@
 import { ResearchWork } from "content-collections";
+import Image from "next/image";
+import Markdown from "react-markdown";
 
 export default function ResearchWorkCard({ work }: { work: ResearchWork }) {
   return (
-    <div>
-      <h1>{work.title}</h1>
-      {work.content && <p className="text-gray-600 text-lg">{work.content}</p>}
+    <div className="p-2">
+      <h1 className="text-xl">{work.title}</h1>
+      {work.images &&
+        work.images.map((image) => (
+          <div>
+            <Image
+              src={image.url}
+              alt={image.caption}
+              width={300}
+              height={300}
+            />
+            <p>{image.caption}</p>
+          </div>
+        ))}
+      {work.content && <Markdown>{work.content}</Markdown>}
     </div>
   );
 }

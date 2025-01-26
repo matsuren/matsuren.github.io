@@ -1,5 +1,6 @@
 import { ResearchCategory } from "content-collections";
 import ResearchWorkCard from "./ResearchWorkCard";
+import Markdown from "react-markdown";
 
 export default function ResearchCategoryWithWorks({
   category,
@@ -10,13 +11,14 @@ export default function ResearchCategoryWithWorks({
     (a, b) => a.sortOrder - b.sortOrder,
   );
   return (
-    <div>
-      <h1>{category.title}</h1>
-
-      {category.content && <p className="text-gray-600 text-lg">{category.content}</p>}
+    <article>
+      <h1 className="text-2xl p-3">{category.title}</h1>
+      {category.content && (
+        <Markdown>{category.content}</Markdown>
+      )}
       {sortedWorks.map((work) => (
         <ResearchWorkCard work={work} />
       ))}
-    </div>
+    </article>
   );
 }
