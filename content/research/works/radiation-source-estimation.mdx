@@ -1,0 +1,11 @@
+---
+title: Radiation source estimation
+category: robotics-for-nuclear-application
+---
+The first step in decommissioning the Fukushima Daiichi nuclear power plant is to reduce radiation levels at the site so that workers can stay longer and be safer. Therefore, it is important to determine the distribution of radiation sources and to decontaminate the estimated radiation sources. Due to high radiation levels, it is desirable to install radiation detectors on a robot, and the robot will autonomously explore the site to estimate the radiation sources.
+
+We developed a path planning method to localize the radiation sources. This method determines the next measurement point based on previous measurements, allowing for autonomous exploration. By utilizing principal component analysis of the simple back-projection results, the robot automatically moves towards the radiation sources and circles around to accurately localize the radiation sources. Please refer to the paper [here](https://www.mdpi.com/2076-3417/11/10/4707).
+
+We also have improved the radiation source estimation by utilizing filtered back-projection. Please refer to the paper [here](https://www.robot.t.u-tokyo.ac.jp/~yamashita/paper/B/B293Final.pdf).
+
+If you are interested in radiation source estimation using non-directional detectors such as Geiger counter, please check out the paper [here](https://www.tandfonline.com/doi/full/10.1080/01691864.2021.2016482) as well.

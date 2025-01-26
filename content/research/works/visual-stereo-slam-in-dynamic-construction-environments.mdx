@@ -1,0 +1,7 @@
+---
+title: Visual Stereo SLAM in dynamic construction environments
+category: robotics-for-constructions
+---
+There is a necessity to estimate the poses of construction machines for autonomous construction. In certain scenarios, such as near mountains and valleys, the GNSS signal is unstable. We are working on Visual Simultaneous Localization and Mapping (Visual SLAM) to localize construction machines.
+
+Typically, Visual SLAM operates under the assumption that the environment is static. However, there are usually other construction machines moving around the site, which breaks this assumption and leads to poor localization accuracy. To address this problem, we employed object detection and semantic segmentation to determine the pixels that are unlikely to be static and reject them from the visual SLAM algorithm. We also utilized a hierarchical approach for efficient computation. Please refer to the paper [here](https://www.tandfonline.com/doi/full/10.1080/01691864.2020.1869586).
