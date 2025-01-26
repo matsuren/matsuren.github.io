@@ -3,10 +3,7 @@ import Image from "next/image";
 import { aboutMeData, AboutMeProps } from "./data";
 import { experienceData, ExperienceTableProps } from "./data";
 import { publicationData, PublicationProps } from "./data";
-import {
-  allResearchCategories,
-  allSelectedWorks,
-} from "@/.content-collections/generated";
+import { allResearchCategories, allSelectedWorks } from "content-collections";
 import Link from "next/link";
 
 const AboutMe: React.FC<AboutMeProps> = ({ name, picture, description }) => {
