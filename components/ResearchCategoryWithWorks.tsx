@@ -17,7 +17,7 @@ export default function ResearchCategoryWithWorks({
       </h1>
       {category.content && <Markdown>{category.content}</Markdown>}
       {sortedWorks.map((work) => (
-        <ResearchWorkCard work={work} />
+        <ResearchWorkCard work={work} key={work._meta.path}/>
       ))}
     </article>
   );

@@ -10,7 +10,7 @@ export default function Research() {
   return (
     <div>
       {sortedResearchCategories.map((category) => (
-        <ResearchCategoryWithWorks category={category} />
+        <ResearchCategoryWithWorks category={category} key={category.slug}/>
       ))}
     </div>
   );

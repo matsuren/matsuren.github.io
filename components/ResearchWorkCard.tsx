@@ -8,7 +8,7 @@ export default function ResearchWorkCard({ work }: { work: ResearchWork }) {
       <h1 className="text-xl">{work.title}</h1>
       {work.images &&
         work.images.map((image) => (
-          <div>
+          <div key={image.url}>
             <Image
               src={image.url}
               alt={image.caption}
