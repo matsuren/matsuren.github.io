@@ -12,10 +12,10 @@ export default function ResearchCategoryWithWorks({
   );
   return (
     <article>
-      <h1 className="text-2xl p-3">{category.title}</h1>
-      {category.content && (
-        <Markdown>{category.content}</Markdown>
-      )}
+      <h1 className="text-2xl p-3" id={category.slug}>
+        {category.title}
+      </h1>
+      {category.content && <Markdown>{category.content}</Markdown>}
       {sortedWorks.map((work) => (
         <ResearchWorkCard work={work} />
       ))}

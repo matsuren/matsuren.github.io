@@ -45,6 +45,19 @@ const researchWorks = defineCollection({
       .optional(),
   }),
 });
+
+const selectedWorks = defineCollection({
+  name: "selectedWorks",
+  directory: "content/research/selected-works",
+  include: "*.mdx",
+  schema: (z) => ({
+    title: z.string(),
+    tag: z.string(),
+    sortOrder: z.number().default(100),
+  }),
+});
+
+
 export default defineConfig({
-  collections: [researchCategories, researchWorks],
+  collections: [researchCategories, researchWorks, selectedWorks],
 });
