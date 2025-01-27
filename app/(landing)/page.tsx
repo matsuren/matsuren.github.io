@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { aboutMeData, AboutMeProps } from "./data";
 import { experienceData, ExperienceTableProps } from "./data";
 import { publicationData, PublicationProps } from "./data";
@@ -9,7 +9,7 @@ import Link from "next/link";
 const AboutMe: React.FC<AboutMeProps> = ({ name, picture, description }) => {
   return (
     <div>
-      <Image
+      <ExportedImage
         src={picture}
         alt="profile picture"
         width={120}

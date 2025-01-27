@@ -1,5 +1,5 @@
 import { ResearchWork } from "content-collections";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Markdown from "react-markdown";
 
 export default function ResearchWorkCard({ work }: { work: ResearchWork }) {
@@ -9,7 +9,7 @@ export default function ResearchWorkCard({ work }: { work: ResearchWork }) {
       {work.images &&
         work.images.map((image) => (
           <div key={image.url}>
-            <Image
+            <ExportedImage
               src={image.url}
               alt={image.caption}
               width={300}

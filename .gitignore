@@ -42,3 +42,7 @@ next-env.d.ts
 
 # Content
 .content-collections
+
+# Image export
+/public/assets/next-image-export-optimizer-hashes.json
+/public/assets/nextImageExportOptimizer/
