@@ -45,11 +45,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
-
       - name: Restore Next.js cache
         uses: actions/cache@v4
         with:
@@ -62,10 +57,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build contents
-        run: pnpm content-collections build
-
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: pnpm next build && pnpm next-image-export-optimizer
 
       - name: Upload artifact
