@@ -7,6 +7,7 @@ import { allResearchCategories, allSelectedWorks } from "content-collections";
 import Link from "next/link";
 
 const AboutMe: React.FC<AboutMeProps> = ({ name, picture, description }) => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <div>
       <ExportedImage
@@ -15,6 +16,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ name, picture, description }) => {
         width={120}
         height={120}
         className="rounded-full shadow-lg"
+        basePath={basePath}
       />
       <p>{name}</p>
       <p>About me</p>

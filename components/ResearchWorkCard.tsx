@@ -3,6 +3,7 @@ import ExportedImage from "next-image-export-optimizer";
 import Markdown from "react-markdown";
 
 export default function ResearchWorkCard({ work }: { work: ResearchWork }) {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   return (
     <div className="p-2">
       <h1 className="text-xl">{work.title}</h1>
@@ -14,6 +15,7 @@ export default function ResearchWorkCard({ work }: { work: ResearchWork }) {
               alt={image.caption}
               width={300}
               height={300}
+              basePath={basePath}
             />
             <p>{image.caption}</p>
           </div>
