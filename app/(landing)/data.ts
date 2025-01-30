@@ -59,6 +59,8 @@ export type PublicationProps = {
 
 export const publicationData: PublicationProps = {
   papers: [
+    `Junwoon Lee, Ren Komatsu, Mitsuru Shinozaki, Toshihiro Kitajima, Hajime Asama, Qi An, and Atsushi Yamashita, “Switch-SLAM: Switching-based LiDAR-Inertial-Visual SLAM for Degenerate Environments”, IEEE Robotics and Automation Letters, vol. 9, no. 8, pp. 7270-7277, 2024.`,
+    `Hidenori Takamiya, Ryosuke Yajima, Jun Younes Louhi Kasahara, Ren Komatsu, Keiji Nagatani, Atsushi Yamashita, and Hajime Asama, “Motion Generation for a Tracked Robot Going Over an Unfixed Obstacle on a Slope Using Reinforcement Learning”, Advanced Robotics, vol. 38, no. 15, pp. 1024-1037, 2024. `,
     `Tomohiro Katsura, Ren Komatsu, Keiji Nagatani, Takumi Chiba, Kazuhiro Chayama, Atsushi Yamashita, and Hajime Asama, “Action Recognition of Excavator Using Physical Simulator and Real Image Data with Class-dependent Data Augmentation", Proceedings of the 2024 IEEE/SICE International Symposium on System Integration, 2024.`,
     `Wakana Endo, Shota Chikushi, Yuichiro Sueoka, Yuki Kato, Kaito Kimura, Yusuke Ikemoto, Ren Komatsu, Keiji Nagatani, Atsushi Yamashita, and Hajime Asama, “Performance-Based Earthmoving Team Organization Algorithm Enabling Task Completion under Changing Conditions", Proceedings of the 2024 IEEE/SICE International Symposium on System Integration, 2024.`,
     `Wanxin Bao, Ren Komatsu, Atsushi Yamashita, and Hajime Asama, “Applying Albedo Estimation and Implicit Neural Representations to Well-posed Shape from Shading", IEEE Access, vol. 11, pp. 40038-40048, 2023.`,
