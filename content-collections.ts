@@ -53,10 +53,10 @@ const selectedWorks = defineCollection({
   schema: (z) => ({
     title: z.string(),
     tag: z.string(),
+    imageUrl: z.string(),
     sortOrder: z.number().default(100),
   }),
 });
-
 
 export default defineConfig({
   collections: [researchCategories, researchWorks, selectedWorks],

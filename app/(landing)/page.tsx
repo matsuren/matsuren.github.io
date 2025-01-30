@@ -115,6 +115,7 @@ const ResearchTopics: React.FC = () => {
 };
 
 const SelectedWorks: React.FC = () => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const sortedSelectedWorks = allSelectedWorks.toSorted(
     (a, b) => a.sortOrder - b.sortOrder,
   );
@@ -122,12 +123,24 @@ const SelectedWorks: React.FC = () => {
     <MainSection title="Selected works">
       {sortedSelectedWorks.map((selectedWork) => (
         <div
-          className="my-4 p-4 border rounded-lg shadow-sm"
+          className="my-4 p-4 border rounded-lg shadow-sm no-flex md:flex items-center"
           key={selectedWork._meta.path}
         >
-          <p className="text-sm text-gray-500">{selectedWork.tag}</p>
-          <p className="py-1 text-lg font-bold">{selectedWork.title}</p>
-          <Markdown>{selectedWork.content}</Markdown>
+          <div className="">
+            <p className="text-sm text-gray-500">{selectedWork.tag}</p>
+            <p className="py-1 text-lg font-bold">{selectedWork.title}</p>
+            <Markdown>{selectedWork.content}</Markdown>
+          </div>
+          <div className="w-full p-2">
+            <ExportedImage
+              src={selectedWork.imageUrl}
+              alt={selectedWork.title}
+              width={300}
+              height={300}
+              basePath={basePath}
+              className="object-contain mx-auto"
+            />
+          </div>
         </div>
       ))}
     </MainSection>
