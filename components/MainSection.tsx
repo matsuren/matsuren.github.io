@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronRight } from "lucide-react";
+import { Hash } from "lucide-react";
 type MainSectionProps = {
   title: string;
   children: React.ReactNode;
@@ -13,12 +13,9 @@ export const MainSection: React.FC<MainSectionProps> = ({
 }) => {
   return (
     <section className="my-2 p-4">
-      <div className="flex gap-x-1">
-        <ChevronRight size={22} />
-        <h2
-          className="text-2xl font-bold mb-2 text-center md:text-left"
-          id={id}
-        >
+      <div className="flex items-center gap-2">
+        <Hash size={24} />
+        <h2 className="text-2xl font-bold text-center md:text-left" id={id}>
           {title}
         </h2>
       </div>
