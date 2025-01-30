@@ -4,10 +4,10 @@ import { aboutMeData, AboutMeProps } from "./data";
 import { experienceData, ExperienceTableProps } from "./data";
 import { publicationData, PublicationProps } from "./data";
 import { allResearchCategories, allSelectedWorks } from "content-collections";
-import Markdown from "react-markdown";
 import Link from "next/link";
 import { Github, Linkedin } from "lucide-react";
 import { MainSection } from "@/components/MainSection";
+import CustomMarkdown from "@/components/CustomMarkdown";
 
 const AboutMe: React.FC<AboutMeProps> = ({ name, picture, description }) => {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -46,7 +46,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ name, picture, description }) => {
           </div>
         </div>
         <div className="text-lg">
-          <Markdown>{description}</Markdown>
+          <CustomMarkdown className="custom-prose-xl" content={description} />
         </div>
       </div>
     </MainSection>
@@ -76,7 +76,7 @@ const Experience: React.FC<ExperienceTableProps> = ({ jobs }) => {
           href="https://docs.google.com/document/d/1w6csWrHToGvulIEXoLqsda6rxwoDNrrMbhohULy7mN8/edit?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-600 transition-colors"
+          className="hover:text-blue-600 transition-colors underline"
         >
           &nbsp;here [CV]
         </a>
@@ -129,7 +129,10 @@ const SelectedWorks: React.FC = () => {
           <div className="">
             <p className="text-sm text-gray-500">{selectedWork.tag}</p>
             <p className="py-1 text-lg font-bold">{selectedWork.title}</p>
-            <Markdown>{selectedWork.content}</Markdown>
+            <CustomMarkdown
+              className="custom-prose-lg"
+              content={selectedWork.content}
+            />
           </div>
           <div className="w-full p-2">
             <ExportedImage

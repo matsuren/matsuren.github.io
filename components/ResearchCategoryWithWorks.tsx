@@ -1,7 +1,7 @@
 import { ResearchCategory } from "content-collections";
 import ResearchWorkCard from "./ResearchWorkCard";
-import Markdown from "react-markdown";
 import { MainSection } from "./MainSection";
+import CustomMarkdown from "./CustomMarkdown";
 
 export default function ResearchCategoryWithWorks({
   category,
@@ -13,7 +13,9 @@ export default function ResearchCategoryWithWorks({
   );
   return (
     <MainSection title={category.title} id={category.slug}>
-      {category.content && <Markdown className="p-2">{category.content}</Markdown>}
+      {category.content && (
+        <CustomMarkdown className="p-2 custom-prose-xl" content={category.content} />
+      )}
       {sortedWorks.map((work) => (
         <ResearchWorkCard work={work} key={work._meta.path} />
       ))}
