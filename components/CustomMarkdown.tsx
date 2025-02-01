@@ -1,13 +1,18 @@
 import React from "react";
 import Markdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
 
 interface CustomMarkdownProps {
   content: string;
   className?: string;
 }
-
+interface CodeProps {
+  children?: React.ReactNode;
+  className?: string;
+  inline?: boolean;
+}
 // Type for the link component props
 type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   children?: React.ReactNode;
@@ -37,13 +42,33 @@ const CustomMarkdown: React.FC<CustomMarkdownProps> = ({
         </a>
       );
     },
+    // Custom code block component
+    code: ({ inline, className, children, ...props }: CodeProps) => {
+      const match = /language-(\w+)/.exec(className || "");
+      return !inline && match ? (
+        <SyntaxHighlighter
+          style={dracula}
+          language={match[1]}
+          PreTag="div"
+          {...props}
+        >
+          {String(children).replace(/\n$/, "")}
+        </SyntaxHighlighter>
+      ) : (
+        <code
+          className={`bg-gray-200 dark:bg-gray-700 px-1 rounded ${className}`}
+          {...props}
+        >
+          {children}
+        </code>
+      );
+    },
   };
 
   return (
     <div className={`max-w-none ${className}`}>
       <Markdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeHighlight]}
         className=""
         components={customComponents}
       >
