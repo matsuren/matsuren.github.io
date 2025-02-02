@@ -14,7 +14,10 @@ export default function ResearchCategoryWithWorks({
   return (
     <MainSection title={category.title} id={category.slug}>
       {category.content && (
-        <CustomMarkdown className="p-2 custom-prose-xl" content={category.content} />
+        <CustomMarkdown
+          className="p-2 custom-prose prose-lg md:prose-xl"
+          content={category.content}
+        />
       )}
       {sortedWorks.map((work) => (
         <ResearchWorkCard work={work} key={work._meta.path} />

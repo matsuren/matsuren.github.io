@@ -46,7 +46,10 @@ const AboutMe: React.FC<AboutMeProps> = ({ name, picture, description }) => {
           </div>
         </div>
         <div className="text-lg">
-          <CustomMarkdown className="custom-prose-xl" content={description} />
+          <CustomMarkdown
+            className="custom-prose prose-base md:prose-xl"
+            content={description}
+          />
         </div>
       </div>
     </MainSection>
@@ -56,7 +59,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ name, picture, description }) => {
 const Experience: React.FC<ExperienceTableProps> = ({ jobs }) => {
   return (
     <MainSection title="Experience">
-      <table className="m-2">
+      <table className="m-2 text-sm md:text-base">
         <tbody>
           {jobs.map((job, index) => (
             <tr
@@ -102,7 +105,7 @@ const ResearchTopics: React.FC = () => {
         {sortedResearchCategories.map((category) => (
           <li key={category.slug} className="my-2">
             <Link
-              className="text-xl font-bold hover:text-blue-600 transition-colors"
+              className="text-lg md:text-xl font-bold hover:text-blue-600 transition-colors"
               href={`/research#${category.slug}`}
             >
               {category.title}
@@ -130,7 +133,7 @@ const SelectedWorks: React.FC = () => {
             <p className="text-sm text-gray-500">{selectedWork.tag}</p>
             <p className="py-1 text-lg font-bold">{selectedWork.title}</p>
             <CustomMarkdown
-              className="custom-prose-lg"
+              className="custom-prose md:prose-lg"
               content={selectedWork.content}
             />
           </div>
@@ -174,7 +177,7 @@ const Publications: React.FC<PublicationProps> = ({ papers }) => {
         </a>
         {" for my complete publications."}
       </p>
-      <ol className="list-decimal p-2">
+      <ol className="list-disc md:list-decimal p-2">
         {papers.map((paper, index) => (
           <li
             className="text-md py-1"

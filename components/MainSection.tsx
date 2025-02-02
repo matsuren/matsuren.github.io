@@ -12,14 +12,17 @@ export const MainSection: React.FC<MainSectionProps> = ({
   id,
 }) => {
   return (
-    <section className="my-2 p-4">
+    <section className="px-1 py-2 md:my-2 md:p-4">
       <div className="flex items-center gap-2">
-        <Hash size={24} />
-        <h2 className="text-2xl font-bold text-center md:text-left" id={id}>
+        <Hash size={24} className="hidden md:block" />
+        <h2
+          className="text-xl md:text-2xl font-bold text-left md:text-center"
+          id={id}
+        >
           {title}
         </h2>
       </div>
-      <div className="m-2">{children}</div>
+      <div className="md:m-2">{children}</div>
     </section>
   );
 };

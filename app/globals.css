@@ -24,10 +24,4 @@ body {
   .custom-prose {
     @apply prose prose-neutral dark:prose-invert;
   }
-  .custom-prose-lg {
-    @apply prose lg:prose-lg prose-neutral dark:prose-invert;
-  }
-  .custom-prose-xl {
-    @apply prose lg:prose-xl prose-neutral dark:prose-invert;
-  }
 }
