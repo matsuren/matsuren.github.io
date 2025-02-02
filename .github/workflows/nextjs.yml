@@ -58,8 +58,8 @@ jobs:
         run: pnpm install
 
       - name: Build with Next.js
-        env:
-          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+        # env:
+        #   NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
         run: pnpm next build && pnpm next-image-export-optimizer
 
       - name: Upload artifact
