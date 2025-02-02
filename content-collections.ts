@@ -1,4 +1,14 @@
-import { defineCollection, defineConfig } from "@content-collections/core";
+import {
+  type Context,
+  defineCollection,
+  defineConfig,
+  type Document,
+} from "@content-collections/core";
+import { exec as cpExec } from "node:child_process";
+import path from "node:path";
+import { promisify } from "node:util";
+
+const exec = promisify(cpExec);
 
 const researchCategories = defineCollection({
   name: "researchCategories",
@@ -58,6 +68,46 @@ const selectedWorks = defineCollection({
   }),
 });
 
+async function lastModificationDate(ctx: Context, document: Document) {
+  return ctx.cache(
+    // TODO: this is a dirty hack to avoid cache key conflicts
+    // we should find a way which handles this automatically
+    { key: "_git_last_modified", ...document },
+    async (document) => {
+      const filePath = path.join(
+        ctx.collection.directory,
+        document._meta.filePath,
+      );
+
+      const { stdout } = await exec(`git log -1 --format=%ai -- ${filePath}`);
+      if (stdout) {
+        return new Date(stdout.trim());
+      }
+      return new Date();
+    },
+  );
+}
+
+const blogs = defineCollection({
+  name: "blogs",
+  directory: "content/blogs",
+  include: "*.mdx",
+  schema: (z) => ({
+    title: z.string(),
+    summary: z.string(),
+    date: z.coerce.date(),
+  }),
+  transform: async (doc, ctx) => {
+    const lastModified = await lastModificationDate(ctx, doc);
+    const slug = doc._meta.path;
+    return {
+      ...doc,
+      lastModified,
+      slug,
+    };
+  },
+});
+
 export default defineConfig({
-  collections: [researchCategories, researchWorks, selectedWorks],
+  collections: [researchCategories, researchWorks, selectedWorks, blogs],
 });

@@ -3,6 +3,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/", title: "Home" },
   { href: "/research", title: "Research" },
+  { href: "/blogs", title: "Blogs" },
 ];
 
 export default function Header() {
